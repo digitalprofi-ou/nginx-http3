@@ -41,7 +41,7 @@ RUN apt-get install -y git \
 RUN wget https://hg.nginx.org/nginx-quic/archive/quic.tar.gz \
     && tar -xvf quic.tar.gz \
     && cd nginx-quic-quic \
-    && ./auto/configure --with-debug --with-http_v3_module  --with-cc-opt="-I../boringssl/include" --with-ld-opt="-L../boringssl/build/ssl -L../boringssl/build/crypto" --with-http_v3_module --with-stream_quic_module --with-http_quic_module \
+    && ./auto/configure --with-debug --with-http_v3_module  --with-cc-opt="-I../boringssl/include" --with-ld-opt="-L../boringssl/build/ssl -L../boringssl/build/crypto" --with-http_v3_module --with-stream_quic_module --with-http_quic_module --with-http_v2_module \
     && make \
     && make install
 
